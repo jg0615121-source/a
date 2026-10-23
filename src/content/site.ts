@@ -121,6 +121,10 @@ export const brand = {
     title: "어쩔저쩔 | So Whaaat",
     description:
       "충주 청년들의 긍정 시너지 플랫폼 어쩔저쩔. 눈치 보지 말고, 나만의 기준으로 함께 움직여요.",
-    url: "https://eojjeol.vercel.app",
+    // 사이트 주소. 비워 두면 Vercel이 배포한 주소를 자동으로 씁니다.
+    // 개인 도메인을 연결하면 여기에 적습니다.  예) "https://eojjeol.kr"
+    url: "",
+    // 링크 공유 썸네일(카톡·인스타·문자). 1200×630 이미지를 public/brand/에 올리고 파일 이름을 적습니다.
+    ogImage: "/brand/og.png",
   },
 };

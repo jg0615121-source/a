@@ -10,8 +10,15 @@ const pretendard = localFont({
   display: "swap",
 });
 
+// 공유 썸네일은 절대 주소여야 카톡·인스타가 불러온다
+const siteUrl =
+  brand.meta.url ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(brand.meta.url),
+  metadataBase: new URL(siteUrl),
   title: brand.meta.title,
   description: brand.meta.description,
   openGraph: {
@@ -20,13 +27,21 @@ export const metadata: Metadata = {
     siteName: brand.name,
     locale: "ko_KR",
     type: "website",
-    images: [{ url: "/brand/og.png", width: 1200, height: 630, alt: brand.name }],
+    url: "/",
+    images: [
+      {
+        url: brand.meta.ogImage,
+        width: 1200,
+        height: 630,
+        alt: `${brand.name} — ${brand.slogan}`,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: brand.meta.title,
     description: brand.meta.description,
-    images: ["/brand/og.png"],
+    images: [brand.meta.ogImage],
   },
   icons: { icon: "/icon.svg" },
 };
