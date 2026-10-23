@@ -111,8 +111,8 @@ export const brand = {
 
   contact: {
     // 인스타그램 계정 주소. 비워 두면 '준비 중'으로 표시됩니다.
-    instagram: "",
-    instagramHandle: "",
+    instagram: "https://www.instagram.com/so_whaaa_t/",
+    instagramHandle: "@so_whaaa_t",
     collaboration:
       "공간·브랜드·기관과의 협업, 함께 만들고 싶은 활동 제안을 기다려요. 인스타그램 DM으로 편하게 연락 주세요.",
   },
