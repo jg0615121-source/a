@@ -105,3 +105,8 @@ export type Program = {
 - 디자인 결정 전 `frontend-design` 스킬을 먼저 적용
 - 컴포넌트는 21st.dev에서 찾아 쓰되(Magic MCP), 위 디자인 토큰에 맞게 재스타일링
 - 섹션 하나 완성할 때마다 dev 서버로 확인 후 다음 섹션
+
+## 한국어 글쓰기
+- 사이트 문구·캡션 등 한국어 텍스트를 새로 쓰거나 고치면 `.claude/skills/humanizer` 기준으로 다듬는다 (출처: daleseo/korean-skills, MIT)
+- 맞춤법은 `grammar-checker`, 문체 통일은 `style-guide` 스킬
+- 인스타 릴스 대본은 `reel-script` 스킬
